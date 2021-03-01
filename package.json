@@ -1,0 +1,22 @@
+{
+  "name": "dejt",
+  "version": "1.0.0",
+  "description": "Swedish Date-wrapper",
+  "main": "dejt.js",
+  "scripts": {
+    "test": "NODE_ENV=test TZ='Europe/Stockholm' mocha dejt.spec.js",
+    "lint": "eslint '**/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/martywho/dejt.git"
+  },
+  "author": "Marty",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "mocha": "^8.1.3"
+  }
+}
