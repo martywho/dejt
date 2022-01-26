@@ -18,13 +18,23 @@ class Dejt {
     return this;
   }
 
+  addYears(years) {
+    this.date.setFullYear(this.date.getFullYear() + years);
+    return this;
+  }
+
+  removeYears(years) {
+    this.date.setFullYear(this.date.getFullYear() - years);
+    return this;
+  }
+
   addDays(days) {
-    this.addHours(24 * days);
+    this.date.setDate(this.date.getDate() + days);
     return this;
   }
 
   removeDays(days) {
-    this.removeHours(24 * days);
+    this.date.setDate(this.date.getDate() - days);
     return this;
   }
 

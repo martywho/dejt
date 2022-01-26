@@ -21,6 +21,30 @@ describe('Dejt', () => {
     done();
   });
 
+  it('should add days', (done) => {
+    const d = new Dejt('2021-10-31').addDays(2);
+    assert.strictEqual(d.toDateString(), '2021-11-02');
+    done();
+  });
+
+  it('should remove days', (done) => {
+    const d = new Dejt('2021-11-02').removeDays(2);
+    assert.strictEqual(d.toDateString(), '2021-10-31');
+    done();
+  });
+
+  it('should add years', (done) => {
+    const d = new Dejt('2021-10-31').addYears(2);
+    assert.strictEqual(d.toDateString(), '2023-10-31');
+    done();
+  });
+
+  it('should remove years', (done) => {
+    const d = new Dejt('2021-10-31').removeYears(2);
+    assert.strictEqual(d.toDateString(), '2019-10-31');
+    done();
+  });
+
   it('should keep hours intact when handling locale', (done) => {
     const d = new Dejt('2020-01-01 13:47:00');
     assert.strictEqual(d.toString(), '2020-01-01 13:47:00');
